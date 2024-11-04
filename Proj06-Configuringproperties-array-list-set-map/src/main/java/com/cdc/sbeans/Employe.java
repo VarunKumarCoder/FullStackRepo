@@ -4,14 +4,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 import lombok.Data;
 
 @Data
 @Component("emp")
-
-public class Employee {
+@ConfigurationProperties(prefix = "org.nit")
+public class Employe {
 	private Integer eno;
 	private String ename;
 	private String[] facColors;
